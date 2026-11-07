@@ -11,10 +11,11 @@
       ]
     }
   ],
-  "rewrites": [
+  "redirects": [
     {
       "source": "/aterforsaljare",
-      "destination": "/resellers.html"
+      "destination": "/resellers?lang=sv",
+      "permanent": false
     }
   ]
 }
