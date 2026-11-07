@@ -14,7 +14,7 @@
   "rewrites": [
     {
       "source": "/aterforsaljare",
-      "destination": "/resellers"
+      "destination": "/resellers.html"
     }
   ]
 }
