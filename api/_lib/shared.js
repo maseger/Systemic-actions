@@ -25,6 +25,7 @@ const FREEBIES = {
   F2_EN: { lang: 'en', title: 'the Systems Map Canvas', file: drive('1NXSgR92SkTWwV9Fe0Q_PPQS88vrm73Hi') },
   F3_EN: { lang: 'en', title: 'Complicated or Complex?', file: drive('12AuNYR-MczBAMndwZjHbbEoe_7BsVhJC') },
   F4_EN: { lang: 'en', title: 'the Introduction to Volume I', file: drive('14rTLcR1sHDlBa8iu8BV5gn0USpAk5mtC') },
+  F5_EN: { lang: 'en', title: 'the Field Guide – Five Tools to Start With', file: 'https://systemicactions.com/assets/dl/F5_Field_Guide_Five_Tools_EN_455e36a6.pdf' },
   F1_SV: { lang: 'sv', title: 'Sju frågor före varje förändringsinitiativ', file: drive('1xtvTsxO56sAU0Gij9GWRobXiN1vz2Vo_') },
   F2_SV: { lang: 'sv', title: 'Systemkartan', file: drive('1VyqGlMV7EEt9yrD-KlKWTHB1Y3NmMNcO') },
   F3_SV: { lang: 'sv', title: 'Komplicerat eller komplext?', file: drive('1-4k0-5PdddGJXudctKigwuEpKmbU7sOy') },

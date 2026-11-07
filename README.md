@@ -16,6 +16,6 @@ Double opt-in through Resend (EU region, domain systemicactions.com).
 
 - `api/subscribe.js` – checks the address and sends a bilingual confirmation email with a signed link.
 - `api/confirm.js` – verifies the link, adds the contact to the segment *SA · Lista · EN/SV* and fires two events: `sa.freebie.confirmed` (payload `key`, `lang`) starts the automation *SA · Leverans av gratismaterial*; `sa.subscriber.new.en|sv` starts *SA · Välkomstserie · EN/SV* the first time an address confirms.
-- `api/_lib/shared.js` – resource keys (F1_EN … F5_SV), segment ids, token signing.
+- `api/_lib/shared.js` – resource keys (F1_EN … F5_EN, F1_SV … F5_SV), segment ids, token signing.
 
 Needs one environment variable in Vercel: `RESEND_API_KEY` (sending + contacts). The confirmation tokens are signed with a key derived from it.
