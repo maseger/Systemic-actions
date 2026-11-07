@@ -287,6 +287,13 @@ h2 { font-size: clamp(32px, 4.2vw, 48px); font-weight: 400; }
   .nav-links a[href="#register"] { display: inline; }
 }
 
+.terms-h { font-size: 26px; font-weight: 400; margin: 48px 0 14px; }
+.terms { margin: 0; border-top: 1px solid var(--band-line); max-width: 860px; }
+.terms div { display: grid; grid-template-columns: minmax(0, 10em) minmax(0, 1fr); gap: 4px 20px; padding: 12px 0; border-bottom: 1px solid var(--band-line); }
+.terms dt { font: 400 12px/1.6 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--band-copper); padding-top: 3px; }
+.terms dd { margin: 0; color: var(--band-ink); }
+@media (max-width: 680px) { .terms div { grid-template-columns: minmax(0, 1fr); } }
+
 .rhero :focus-visible { outline-color: var(--band-copper); }
 .aihero { font: 400 12px/1.5 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--band-soft); margin: 28px 0 0; }
 #book { background: var(--bg2); }
@@ -387,9 +394,18 @@ h2 { font-size: clamp(32px, 4.2vw, 48px); font-weight: 400; }
       <p class="lead" style="margin-top:18px"><span lang="en">The books are printed on demand, so there is no stock to carry before you know there are readers.</span><span lang="sv">Böckerna trycks vid beställning, så ni behöver inte lagerhålla innan ni vet att det finns läsare.</span></p>
       <ol class="steps">
         <li><h3><span lang="en">Enquire</span><span lang="sv">Förfrågan</span></h3><p><span lang="en">Tell me who you are and how you sell.</span><span lang="sv">Berätta vilka ni är och hur ni säljer.</span></p></li>
-        <li><h3><span lang="en">Get the details</span><span lang="sv">Få uppgifterna</span></h3><p><span lang="en">I send the ISBNs, the cover and the product information when they are final. Ordering route, terms and delivery times follow with them.</span><span lang="sv">Jag skickar ISBN, omslag och produktinformation när de är klara. Beställningsväg, villkor och leveranstider följer med.</span></p></li>
-        <li><h3><span lang="en">Order</span><span lang="sv">Beställ</span></h3><p><span lang="en">I tell you when and how ordering opens for resellers. The trade discount is 40%.</span><span lang="sv">Jag talar om när och hur återförsäljare kan beställa. Återförsäljarrabatten är 40 %.</span></p></li>
+        <li><h3><span lang="en">Get the details</span><span lang="sv">Få uppgifterna</span></h3><p><span lang="en">I send the ISBNs, the cover and the product information when they are final, before pre-orders open on 1 December 2026.</span><span lang="sv">Jag skickar ISBN, omslag och produktinformation när de är klara, innan förbeställningen öppnar 1 december 2026.</span></p></li>
+        <li><h3><span lang="en">Order</span><span lang="sv">Beställ</span></h3><p><span lang="en">Order through your usual wholesaler from Ingram’s catalogue, using the ISBN. The trade discount is 40%.</span><span lang="sv">Beställ via er vanliga grossist ur Ingrams katalog, med ISBN. Återförsäljarrabatten är 40 %.</span></p></li>
       </ol>
+      <h3 class="terms-h"><span lang="en">Terms</span><span lang="sv">Villkor</span></h3>
+      <dl class="terms">
+        <div><dt><span lang="en">Ordering</span><span lang="sv">Beställning</span></dt><dd><span lang="en">Through Ingram’s wholesale network (IngramSpark distribution), from pre-order on 1 December 2026.</span><span lang="sv">Via Ingrams grossistnätverk (IngramSpark-distribution), från förbeställningen 1 december 2026.</span></dd></div>
+        <div><dt><span lang="en">Discount</span><span lang="sv">Rabatt</span></dt><dd><span lang="en">40% of the list price, on both paperback and hardcover.</span><span lang="sv">40 % av rekommenderat pris, på både häftad och inbunden.</span></dd></div>
+        <div><dt><span lang="en">Returns</span><span lang="sv">Returer</span></dt><dd><span lang="en">Not returnable. The books are printed to order, so order the copies you expect to sell.</span><span lang="sv">Ingen returrätt. Böckerna trycks per order, så beställ det antal ni räknar med att sälja.</span></dd></div>
+        <div><dt><span lang="en">Delivery</span><span lang="sv">Leverans</span></dt><dd><span lang="en">Printed and shipped by Ingram. Delivery time depends on your country and wholesaler.</span><span lang="sv">Trycks och skickas av Ingram. Leveranstiden beror på land och grossist.</span></dd></div>
+        <div><dt><span lang="en">Payment</span><span lang="sv">Betalning</span></dt><dd><span lang="en">On your wholesaler’s usual terms.</span><span lang="sv">Enligt er grossists vanliga villkor.</span></dd></div>
+        <div><dt><span lang="en">Currencies</span><span lang="sv">Valutor</span></dt><dd><span lang="en">List prices in USD now; prices in EUR, GBP and other markets are published with the ISBNs.</span><span lang="sv">Rekommenderade priser i USD nu; priser i EUR, GBP och andra marknader publiceras tillsammans med ISBN.</span></dd></div>
+      </dl>
     </div>
   </section>
 
@@ -431,13 +447,13 @@ h2 { font-size: clamp(32px, 4.2vw, 48px); font-weight: 400; }
     <div class="wrap">
       <div lang="en">
         <h2>How your details are handled</h2>
-        <p>Mattias Seger is the data controller. I use what you enter here to answer your enquiry and to send you the information you ask for about the book (ISBNs, cover, ordering route, terms). The basis is my legitimate interest in answering business enquiries (GDPR art. 6.1 f). You need to give the details marked * for me to be able to answer.</p>
+        <p>Mattias Seger is the data controller. I use what you enter here to answer your enquiry and to send you the information you ask for about the book (ISBNs, cover, product information). The basis is my legitimate interest in answering business enquiries (GDPR art. 6.1 f). You need to give the details marked * for me to be able to answer.</p>
         <p>Copies of your enquiry exist in my inbox, in the sending log of Resend (the delivery service, used in its EU region, Ireland) and in the technical logs of the hosting provider (Vercel). Resend is a US company, so a transfer outside the EU/EEA can occur; write to me and I will tell you which safeguards apply. I keep the enquiry for no longer than 24 months after our last contact, and delete it earlier if you ask.</p>
         <p>You can ask to see, correct or delete your details, restrict their use or object to it, by writing to <a href="mailto:mattias@systemicactions.com">mattias@systemicactions.com</a>. You can complain to the Swedish Authority for Privacy Protection (<a href="https://www.imy.se" rel="noopener">IMY</a>). The page remembers your language choice in your browser. It sets no cookies and has no analytics.</p>
       </div>
       <div lang="sv">
         <h2>Så hanteras era uppgifter</h2>
-        <p>Personuppgiftsansvarig är Mattias Seger. Jag använder det ni skriver här för att svara på er förfrågan och skicka den information om boken som ni ber om (ISBN, omslag, beställningsväg, villkor). Grunden är mitt berättigade intresse av att besvara affärsförfrågningar (GDPR art. 6.1 f). Uppgifterna markerade * behövs för att jag ska kunna svara.</p>
+        <p>Personuppgiftsansvarig är Mattias Seger. Jag använder det ni skriver här för att svara på er förfrågan och skicka den information om boken som ni ber om (ISBN, omslag, produktinformation). Grunden är mitt berättigade intresse av att besvara affärsförfrågningar (GDPR art. 6.1 f). Uppgifterna markerade * behövs för att jag ska kunna svara.</p>
         <p>Kopior av förfrågan finns i min inkorg, i Resends sändningslogg (utskickstjänsten, som används i EU-regionen, Irland) och i hostingleverantörens tekniska loggar (Vercel). Resend är ett amerikanskt bolag, så en överföring utanför EU/EES kan förekomma; skriv till mig så berättar jag vilka skyddsåtgärder som gäller. Jag sparar förfrågan högst 24 månader efter vår senaste kontakt och raderar den tidigare om ni ber om det.</p>
         <p>Ni kan be att få se, rätta eller radera era uppgifter, begränsa behandlingen eller invända mot den, genom att skriva till <a href="mailto:mattias@systemicactions.com">mattias@systemicactions.com</a>. Ni kan klaga hos Integritetsskyddsmyndigheten (<a href="https://www.imy.se" rel="noopener">IMY</a>). Sidan minns ert språkval i er webbläsare. Den sätter inga kakor och har ingen statistik.</p>
       </div>
