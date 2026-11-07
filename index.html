@@ -2,218 +2,602 @@
 <html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Systemic Actions – Systems Thinking for Leaders · Mattias Seger</title>
-<meta name="description" content="Systemic Actions – Systems Thinking for Leaders, From Theory to Mastery. A book series by Mattias Seger. Volume I, Seeing the Whole, is published 19 January 2027.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="canonical" href="https://systemicactions.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://systemicactions.com/">
 <meta property="og:title" content="Systemic Actions – Systems Thinking for Leaders">
-<meta property="og:description" content="A book series by Mattias Seger. Volume I, Seeing the Whole, is published 19 January 2027.">
+<meta property="og:description" content="A book series by Mattias Seger. Volume I, Seeing the Whole, comes out in English on 19 January 2027.">
 <meta property="og:image" content="https://systemicactions.com/assets/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/img/apple-touch-icon.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-<link rel="preload" href="/assets/fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=2">
-<script>
-  // Pick language before first paint: ?lang= > saved choice > browser language
-  (function () {
-    var l = null;
-    try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
-    if (l !== 'sv' && l !== 'en') { try { l = localStorage.getItem('sa-lang'); } catch (e) {} }
-    if (l !== 'sv' && l !== 'en') { l = /^sv\b/i.test(navigator.language || '') ? 'sv' : 'en'; }
-    document.documentElement.setAttribute('data-lang', l);
-    document.documentElement.lang = l;
-  })();
-</script>
+<title>Systemic Actions – Systems Thinking for Leaders · Mattias Seger</title>
+<meta name="description" content="Systemic Actions – systems thinking for leaders, from theory to mastery. A book series by Mattias Seger. Volume I, Seeing the Whole, comes out in English on 19 January 2027.">
+<style>
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:200 800;font-display:swap;src:url(/assets/fonts/newsreader-var-normal.woff2) format("woff2")}
+@font-face{font-family:"Newsreader";font-style:italic;font-weight:200 800;font-display:swap;src:url(/assets/fonts/newsreader-var-italic.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2")}
+/* Layout: a quiet book-like page. One photographic moment (the hero, text only on the glass plate),
+   then paper, forest and copper line. Tokens follow the design system "Mattias Seger · Ledarskapsböcker":
+   papper (light) and skog (dark). */
+:root {
+  --bg: #F1EDE4;          /* lb-paper */
+  --bg2: #E6E0D2;         /* lb-paper2 */
+  --ink: #1B2320;         /* lb-ink */
+  --soft: #4E5853;        /* lb-soft */
+  --hair: #C9C2B2;        /* lb-hair */
+  --copper: #8A4520;      /* lb-copperD: copper text on paper */
+  --copper-line: #A65A2E; /* lb-copper: illustration line */
+  --btn-bg: #8A4520;
+  --btn-fg: #F1EDE4;
+  --field: #F1EDE4;
+  --field-line: #6F7973;  /* input border, 3.4:1 on paper2 */
+  --band-bg: #183229;     /* lb-forest */
+  --band-ink: #ECE7DC;    /* lb-onF */
+  --band-soft: #AFBBB3;   /* lb-onFs */
+  --band-line: #3F6457;   /* lb-lineF */
+  --band-copper: #E0A57A; /* lb-copperL */
+  --forest: #183229;
+  --glass: rgba(12, 20, 18, .55);
+  --glass-line: #ECE7DC;
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+  --wrap: 1120px;
+  --radius: 6px;           /* lb-radie-ruta */
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #183229; --bg2: #22433A; --ink: #ECE7DC; --soft: #AFBBB3; --hair: #3F6457;
+    --copper: #E0A57A; --copper-line: #E0A57A; --btn-bg: #E0A57A; --btn-fg: #183229; --field: #183229; --field-line: #7FA192;
+    --band-bg: #22433A; --band-line: #5F8576; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #183229; --bg2: #22433A; --ink: #ECE7DC; --soft: #AFBBB3; --hair: #3F6457;
+  --copper: #E0A57A; --copper-line: #E0A57A; --btn-bg: #E0A57A; --btn-fg: #183229; --field: #183229; --field-line: #7FA192;
+  --band-bg: #22433A; --band-line: #5F8576; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--serif); font-size: 19px; line-height: 1.6;
+  font-optical-sizing: auto; -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--forest); z-index: 30; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; font-weight: 330; line-height: 1.12; text-wrap: balance; }
+p { margin: 0 0 1em; }
+:focus-visible { outline: 2px solid var(--copper-line); outline-offset: 3px; }
+.band :focus-visible, .nav :focus-visible, .plate :focus-visible, .footer :focus-visible { outline-color: var(--band-copper); }
+
+/* language: only the active language is shown */
+html[data-lang="en"] [lang="sv"], html[data-lang="sv"] [lang="en"] { display: none !important; }
+
+.wrap {
+  max-width: calc(var(--wrap) + 32px); margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.skip { position: absolute; left: -9999px; top: 8px; background: var(--forest); color: var(--band-ink); padding: 8px 14px; z-index: 40; border-radius: var(--radius); }
+.skip:focus { left: 16px; }
+
+.kicker { font: 400 12px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--copper); margin: 0 0 18px; }
+
+/* NAV */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--forest); color: var(--band-ink); border-bottom: 1px solid var(--band-line); }
+.nav .wrap { display: flex; align-items: center; gap: 22px; min-height: 60px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand img { width: 34px; height: 34px; }
+.brand span { font: 500 12px/1 var(--mono); letter-spacing: .24em; text-transform: uppercase; color: var(--band-copper); }
+.nav-links { display: flex; gap: 24px; margin-left: auto; }
+.nav-links a { text-decoration: none; font-size: 16px; color: var(--band-ink); }
+.nav-links a:hover { color: var(--band-copper); }
+.lang { display: flex; border: 1px solid var(--band-line); border-radius: var(--radius); overflow: hidden; }
+.lang button { font: 400 12px/1 var(--mono); letter-spacing: .12em; background: none; border: 0; color: var(--band-ink); padding: 8px 12px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--band-copper); color: var(--forest); }
+
+/* HERO: LbFyrfargsbild-style image, text only on the glass plate (LbVersband) */
+.hero { position: relative; background: var(--forest); min-height: clamp(560px, 50vw, 720px); display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; }
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+.hero .wrap { position: relative; width: 100%; padding-block: clamp(32px, 5vw, 56px); display: flex; justify-content: center; }
+.plate {
+  position: relative; width: min(700px, 100%); padding: 40px 48px 42px;
+  background: var(--glass); border: 1px solid rgba(225, 214, 196, .35); border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); color: var(--band-ink);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .plate { background: rgba(12, 20, 18, .84); } }
+.plate::before, .plate::after { content: ""; position: absolute; left: 18px; right: 18px; height: 1.5px; background: var(--glass-line); opacity: .8; }
+.plate::before { top: 12px; } .plate::after { bottom: 12px; }
+.plate .kicker { color: var(--band-copper); }
+.plate h1 { font-size: clamp(38px, 5.2vw, 60px); }
+.plate h1 em { display: block; font-style: italic; color: var(--band-copper); font-size: .8em; margin-top: 4px; }
+.plate .sub { font-size: clamp(19px, 2vw, 22px); font-style: italic; margin: 22px 0 8px; }
+.plate .date { font: 400 12px/1.5 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--band-soft); margin: 0; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn { display: inline-block; font: 500 13.5px/1 var(--mono); letter-spacing: .05em; text-decoration: none; padding: 15px 20px; border-radius: var(--radius); border: 1px solid transparent; cursor: pointer; }
+.btn-primary { background: var(--band-copper); color: var(--forest); }
+.btn-primary:hover { filter: brightness(1.1); }
+.btn-ghost { border-color: rgba(236, 231, 220, .5); color: var(--band-ink); }
+.btn-ghost:hover { border-color: var(--band-ink); }
+
+section, .freebie { scroll-margin-top: 84px; }
+.sec { padding-block: clamp(72px, 9vw, 120px); }
+h2 { font-size: clamp(32px, 4.2vw, 48px); font-weight: 400; }
+.lead { font-size: 21px; color: var(--soft); max-width: 40em; }
+
+/* IDEA */
+.idea .grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 24px clamp(40px, 7vw, 96px); align-items: start; }
+.idea blockquote { margin: 0 0 36px; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.22; font-style: italic; font-weight: 340; text-wrap: balance; }
+.idea .text p { color: var(--soft); max-width: 36em; }
+.idea .text em { color: var(--ink); }
+.fig { margin: 0; }
+.fig svg { width: 100%; height: auto; overflow: visible; }
+.fig figcaption { font-style: italic; font-size: 14.5px; line-height: 1.4; color: var(--soft); margin-top: 10px; text-align: center; }
+.fig .ln { fill: none; stroke: var(--copper-line); stroke-width: 1; }
+.fig .ln-b { fill: none; stroke: var(--copper-line); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.fig .nd { fill: var(--copper-line); }
+.fig .lb { font: italic 400 17px var(--serif); fill: var(--ink); }
+.fig .lb-s { font: italic 400 15px var(--serif); fill: var(--soft); }
+
+/* SERIES (dark band) */
+.band { background: var(--band-bg); color: var(--band-ink); }
+.band .kicker { color: var(--band-copper); }
+.band .lead { color: var(--band-soft); }
+.series .head { max-width: 720px; margin-bottom: 56px; }
+.route { list-style: none; margin: 0; padding: 0; }
+.vol { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 20px; }
+.vol .rail { position: relative; display: flex; justify-content: center; }
+.vol .rail::before { content: ""; position: absolute; top: 14px; bottom: -14px; left: 50%; width: 1px; background: var(--band-line); }
+.vol:last-child .rail::before { display: none; }
+.vol .dot { position: relative; margin-top: 8px; width: 13px; height: 13px; border-radius: 50%; border: 1.4px solid var(--band-copper); background: var(--band-bg); }
+.vol.on .dot { background: var(--band-copper); }
+.vol .body { padding-bottom: 44px; }
+.vol .no { font: 400 12px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--band-copper); margin: 4px 0 8px; }
+.vol h3 { font-size: clamp(26px, 3vw, 34px); font-weight: 380; margin-bottom: 10px; }
+.vol p { color: var(--band-ink); max-width: 40em; margin-bottom: 10px; }
+.vol .state { font: 400 12px/1.5 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--band-copper); margin: 0; }
+.vol.on .body { background: rgba(12, 20, 18, .28); border: 1px solid var(--band-line); border-radius: var(--radius); padding: 30px 32px; margin-bottom: 44px; }
+.vol.on h3 { font-size: clamp(34px, 4.4vw, 48px); }
+.vol.on .spec { font: 400 13px/1.6 var(--mono); letter-spacing: .02em; color: var(--band-soft); margin: 14px 0 0; }
+.vol.on .state { margin-bottom: 14px; }
+.vol .act { margin: 18px 0 0; }
+
+/* FREE */
+.free .head { max-width: 720px; margin-bottom: 48px; }
+.free-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.free-grid .featured, .free-grid .more { grid-column: 1 / -1; }
+.free-grid .featured p { max-width: 38em; }
+.free-grid.rest-odd .freebie:last-child { grid-column: 1 / -1; }
+.free-grid .more { font-size: 15px; font-weight: 400; font-family: var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--copper); margin-top: 20px; }
+.free .note { font-size: 16px; color: var(--soft); max-width: 40em; margin: 18px 0 0; }
+.free .note a, .priv a { color: var(--copper); }
+.priv { padding-block: clamp(56px, 7vw, 88px); border-top: 1px solid var(--hair); }
+.priv h2 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 18px; }
+.priv p { color: var(--soft); max-width: 40em; }
+.freebie { display: flex; flex-direction: column; min-width: 0; background: var(--bg2); border-radius: var(--radius); padding: 28px 28px 26px; }
+.freebie .tag { font: 400 12px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--copper); margin: 0 0 10px; }
+.freebie h3 { font-size: 27px; font-weight: 400; margin-bottom: 10px; }
+.freebie p { color: var(--soft); font-size: 17px; flex: 1; }
+.freebie form { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; max-width: 520px; }
+.freebie input[type=email] { flex: 1 1 190px; min-width: 0; font: 400 16px var(--serif); padding: 13px 14px; border: 1px solid var(--field-line); border-radius: var(--radius); background: var(--field); color: var(--ink); }
+.freebie .btn-primary { background: var(--btn-bg); color: var(--btn-fg); }
+.freebie .btn-primary:hover { filter: brightness(1.12); }
+.freebie .btn[disabled] { opacity: .6; cursor: default; }
+.freebie .msg { font-size: 16px; margin: 12px 0 0; color: var(--ink); }
+.freebie .msg:empty { display: none; }
+.freebie .msg a { color: var(--copper); }
+.hp { position: absolute; left: -9999px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* AUTHOR */
+.author { background: var(--bg2); }
+.author .grid { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
+.author-photo { width: 100%; max-width: 280px; aspect-ratio: 1; object-fit: cover; }
+.author h2 { margin-bottom: 20px; }
+.author .bio p { color: var(--soft); max-width: 38em; }
+.author .bio p:first-child { color: var(--ink); }
+.links { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 10px 24px; font: 400 14px/1.4 var(--mono); }
+.links a { text-decoration-color: var(--copper-line); text-underline-offset: 4px; }
+
+/* FOOTER */
+.footer { background: var(--forest); border-top: 1px solid var(--band-line); color: var(--band-soft); padding-block: 40px; font: 400 14px/1.7 var(--mono); letter-spacing: .03em; }
+.footer .wrap { display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; }
+.footer .wordmark { width: 280px; max-width: 100%; height: auto; }
+.footer p { margin: 0; }
+.footer a { color: var(--band-copper); }
+.footer .ai { flex-basis: 100%; border-top: 1px solid var(--band-line); padding-top: 18px; }
+
+@media (max-width: 900px) {
+  body { font-size: 18px; }
+  .idea .grid, .author .grid { grid-template-columns: minmax(0, 1fr); }
+  .fig { max-width: 420px; }
+  .author-photo { max-width: 200px; }
+  .free-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 680px) {
+  .nav .wrap { gap: 12px; }
+  .brand span { display: none; }
+  .nav-links { gap: 0; }
+  .nav-links a:not([href="#free"]) { display: none; }
+  .nav-links a { font-size: 15px; }
+  .hero { min-height: 0; }
+  .hero > img { position: relative; height: 260px; }
+  .hero .wrap { margin-top: -88px; padding-block: 0 32px; }
+  .plate { padding: 32px 24px 34px; background: rgba(12, 20, 18, .82); }
+  .vol { grid-template-columns: 28px minmax(0, 1fr); column-gap: 12px; }
+  .vol.on .body { padding: 22px 20px; }
+  .freebie { padding: 22px 20px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
 </head>
 <body>
 
+
+<script>
+/* choose language before first paint: saved choice, else browser language */
+(function () {
+  var l = null, q = null;
+  try { q = (/[?&]lang=(sv|en)\b/.exec(location.search) || [])[1] || null; } catch (e) {}
+  try { l = q || localStorage.getItem('sa-lang'); } catch (e) { l = q; }
+  if (l !== 'sv' && l !== 'en') l = /^sv/i.test(navigator.language || '') ? 'sv' : 'en';
+  document.documentElement.setAttribute('data-lang', l);
+  document.documentElement.lang = l;
+})();
+</script>
+
+<a class="skip" href="#main"><span lang="en">Skip to content</span><span lang="sv">Hoppa till innehållet</span></a>
+
 <header class="nav">
-  <a class="brand" href="#top" aria-label="Systemic Actions">
-    <span class="brand-mark">SA</span>
-    <span class="brand-name">Systemic Actions</span>
-  </a>
-  <nav class="nav-links" aria-label="Main">
-    <a href="#series"><span lang="en">The series</span><span lang="sv">Serien</span></a>
-    <a href="#free"><span lang="en">Free</span><span lang="sv">Gratis</span></a>
-    <a href="#author"><span lang="en">Author</span><span lang="sv">Författaren</span></a>
-  </nav>
-  <div class="lang-switch" role="group" aria-label="Language / Språk">
-    <button type="button" data-set-lang="en" aria-label="English">EN</button>
-    <button type="button" data-set-lang="sv" aria-label="Svenska">SV</button>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Systemic Actions">
+      <img src="assets/logos/ledarskap-monogram.svg" alt="" width="34" height="34">
+      <span>Systemic Actions</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#series"><span lang="en">The series</span><span lang="sv">Serien</span></a>
+      <a href="#free"><span lang="en">Free</span><span lang="sv">Gratis</span></a>
+      <a href="#author"><span lang="en">Author</span><span lang="sv">Författaren</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Språk">
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-set-lang="sv" aria-pressed="false">SV</button>
+    </div>
   </div>
 </header>
 
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <picture>
-      <source media="(max-width: 900px)" srcset="/assets/img/hero-1200.jpg">
-      <img class="hero-bg" src="/assets/img/hero.jpg" alt="" fetchpriority="high">
-    </picture>
-    <div class="hero-inner">
-      <p class="kicker">SYSTEMIC ACTIONS</p>
-      <h1>
-        <span lang="en">Systems Thinking for Leaders</span>
-        <span lang="sv">Systemtänkande för ledare</span>
-        <em><span lang="en">in real life</span><span lang="sv">i verkligheten</span></em>
-      </h1>
-      <p class="hero-sub">
-        <span lang="en">From theory to mastery. A book series by Mattias Seger.</span>
-        <span lang="sv">Från teori till mästerskap. En bokserie av Mattias Seger.</span>
-      </p>
-      <p class="hero-date">
-        <span lang="en">Volume I · Seeing the Whole · 19 January 2027</span>
-        <span lang="sv">Band I på engelska 19 januari 2027 · på svenska våren 2027</span>
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#free">
-          <span lang="en">Read the Introduction free</span>
-          <span lang="sv">Läs inledningen gratis</span>
-        </a>
-        <a class="btn btn-ghost" href="#series">
-          <span lang="en">See the series</span>
-          <span lang="sv">Se serien</span>
-        </a>
+<main id="main">
+  <section class="hero" id="top">
+    <img id="hero-img" fetchpriority="high" src="assets/img/hero.jpg" width="2033" height="774" alt=""
+         data-alt-en="Two ancient trees frame a misty valley. Glowing copper threads link small groups of people standing on distant ridges."
+         data-alt-sv="Två gamla träd ramar in en dimmig dal. Glödande kopparådror binder ihop små grupper av människor på avlägsna åsar.">
+    <div class="wrap">
+      <div class="plate">
+        <p class="kicker"><span lang="en">Systemic Actions · A book series</span><span lang="sv">Systemic Actions · En bokserie</span></p>
+        <h1>
+          <span lang="en">Systems Thinking for Leaders<em>in real life</em></span>
+          <span lang="sv">Systemtänkande för ledare<em>i verkligheten</em></span>
+        </h1>
+        <p class="sub">
+          <span lang="en">From theory to mastery. By Mattias Seger.</span>
+          <span lang="sv">Från teori till mästerskap. Av Mattias Seger.</span>
+        </p>
+        <p class="date">
+          <span lang="en">Volume I · Seeing the Whole · English edition 19 January 2027</span>
+          <span lang="sv">Band I · Att se helheten · engelska utgåvan 19 januari 2027</span>
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#intro"><span lang="en">Get the free Introduction</span><span lang="sv">Få inledningen gratis</span></a>
+          <a class="btn btn-ghost" href="#series"><span lang="en">See the series</span><span lang="sv">Se serien</span></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- THE IDEA -->
-  <section class="idea">
-    <div class="idea-text">
-      <p class="label"><span lang="en">The idea</span><span lang="sv">Tanken</span></p>
-      <blockquote>
-        <span lang="en">You cannot develop leaders out of a system that keeps producing the same behaviour.</span>
-        <span lang="sv">Man kan inte utveckla ledare ur ett system som fortsätter att skapa samma beteenden.</span>
-      </blockquote>
+  <section class="idea sec" id="idea">
+    <div class="wrap">
+      <p class="kicker" aria-hidden="true"><span lang="en">The idea</span><span lang="sv">Tanken</span></p>
+      <h2 class="sr"><span lang="en">The idea</span><span lang="sv">Tanken</span></h2>
+      <div class="grid">
+        <div>
+          <blockquote>
+            <span lang="en">You cannot develop leaders out of a system that keeps producing the same behaviour.</span>
+            <span lang="sv">Man kan inte utveckla ledare ur ett system som fortsätter att skapa samma beteenden.</span>
+          </blockquote>
+          <div class="text">
+            <div lang="en">
+              <p>For more than twenty years I worked in leadership development. From 2012 I began testing new approaches in government agencies, state-owned companies and listed companies, and one lesson kept returning: the diagnosis is systemic, but the efforts often stop at the individual and the group.</p>
+              <p><em>Systemic Actions</em> is what I learned along the way. It is systems thinking for leaders who have to act on Monday morning: how to tell the complicated from the complex, where the leverage points are, which structures you are prepared to change, and how what your leaders discover can reach the people who can change the conditions.</p>
+            </div>
+            <div lang="sv">
+              <p>I mer än tjugo år arbetade jag med ledarutveckling. Från 2012 började jag pröva nya grepp i myndigheter, statliga bolag och börsnoterade bolag, och en lärdom kom tillbaka gång på gång: diagnosen är systemisk, men insatserna stannar ofta på individ- och gruppnivå.</p>
+              <p><em>Systemic Actions</em> är det jag lärde mig på vägen. Det är systemtänkande för ledare som ska agera på måndag morgon: hur du skiljer det komplicerade från det komplexa, var hävstängerna finns, vilka strukturer du är beredd att ändra och hur det dina ledare upptäcker kan nå dem som kan ändra förutsättningarna.</p>
+            </div>
+          </div>
+        </div>
+        <figure class="fig">
+          <svg id="loop-fig" viewBox="0 30 420 270" role="img" aria-label="" data-label-en="A feedback loop: the system keeps producing the behaviour, and the leaders sit inside the loop." data-label-sv="En återkopplingsslinga: systemet fortsätter att skapa beteendet, och ledarna befinner sig inne i slingan.">
+            <path class="ln-b" d="M110 175 A100 100 0 0 1 310 175"/>
+            <path class="ln-b" d="M310 175 A100 100 0 0 1 110 175"/>
+            <path class="ln-b" d="M200 66 L214 75 L200 84"/>
+            <circle class="ln" cx="210" cy="175" r="30" stroke-dasharray="3 4"/>
+            <circle class="nd" cx="110" cy="175" r="5"/>
+            <circle class="nd" cx="310" cy="175" r="5"/>
+            <text class="lb" x="210" y="180" text-anchor="middle"><tspan lang="en">leaders</tspan><tspan lang="sv">ledarna</tspan></text>
+            <text class="lb" x="94" y="180" text-anchor="end"><tspan lang="en">system</tspan><tspan lang="sv">systemet</tspan></text>
+            <text class="lb" x="326" y="180" text-anchor="start"><tspan lang="en">behaviour</tspan><tspan lang="sv">beteendet</tspan></text>
+            <text class="lb-s" x="210" y="54" text-anchor="middle"><tspan lang="en">keeps producing</tspan><tspan lang="sv">fortsätter att skapa</tspan></text>
+          </svg>
+          <figcaption><span lang="en">The diagnosis is systemic – the efforts often stop at the individual and the group.</span><span lang="sv">Diagnosen är systemisk – insatserna stannar ofta på individ- och gruppnivå.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="series band sec" id="series">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker"><span lang="en">The series</span><span lang="sv">Serien</span></p>
+        <h2><span lang="en">Five volumes, one journey</span><span lang="sv">Fem band, en resa</span></h2>
+        <p class="lead" style="margin-top:18px">
+          <span lang="en">From seeing the whole, to the patterns that connect, to action – with a field guide of tools and seven cases that follow the work from contract to ending.</span>
+          <span lang="sv">Från att se helheten, via mönstren som förbinder, till handling – med en fältguide full av verktyg och sju fall som följer arbetet från kontrakt till avslut.</span>
+        </p>
+      </div>
+      <ol class="route">
+        <li class="vol on">
+          <div class="rail"><span class="dot"></span></div>
+          <div class="body">
+            <p class="no"><span lang="en">Volume I</span><span lang="sv">Band I</span></p>
+            <p class="state">
+              <span lang="en">English edition 19 January 2027 · Swedish edition spring 2027 · pre-order from 1 December 2026</span>
+              <span lang="sv">Engelska utgåvan 19 januari 2027 · svenska utgåvan våren 2027 · förbeställ från 1 december 2026</span>
+            </p>
+            <h3><span lang="en">Seeing the Whole</span><span lang="sv">Att se helheten</span></h3>
+            <p>
+              <span lang="en">Complexity and systems thinking, what they are and why they matter to every leader. From VUCA to PUMO, the three capabilities of leadership across five dimensions, and the seven cases whose journeys run through the whole series.</span>
+              <span lang="sv">Komplexitet och systemtänkande, vad det är och varför det angår varje ledare. Från VUCA till PUMO, ledarskapets tre förmågor i fem dimensioner och de sju fall vars resor löper genom hela serien.</span>
+            </p>
+            <p class="act"><a class="btn btn-primary" href="#intro"><span lang="en">Get the Introduction</span><span lang="sv">Hämta inledningen</span></a></p>
+            <p class="spec">
+              <span lang="en">Landscape, full colour, 480 pages · English edition: paperback $69, hardcover $119 · Amazon and other bookshops</span>
+              <span lang="sv">Liggande format, fyrfärg, 480 sidor · Engelska utgåvan: häftad 69 USD, inbunden 119 USD · via Amazon och andra bokhandlar</span>
+            </p>
+          </div>
+        </li>
+        <li class="vol">
+          <div class="rail"><span class="dot"></span></div>
+          <div class="body">
+            <p class="no"><span lang="en">Volume II</span><span lang="sv">Band II</span></p>
+            <h3><span lang="en">The Patterns That Connect</span><span lang="sv">Mönstren som förbinder</span></h3>
+            <p><span lang="en">Physics, networks, the human systems – and the patterns behind the seven cases.</span><span lang="sv">Fysik, nätverk, människans system – och mönstren bakom de sju fallen.</span></p>
+            <p class="state"><span lang="en">Coming 2027</span><span lang="sv">Kommer 2027</span></p>
+          </div>
+        </li>
+        <li class="vol">
+          <div class="rail"><span class="dot"></span></div>
+          <div class="body">
+            <p class="no"><span lang="en">Volume III</span><span lang="sv">Band III</span></p>
+            <h3><span lang="en">From Insight to Action</span><span lang="sv">Från insikt till handling</span></h3>
+            <p><span lang="en">Four kinds of systems, leading living systems, fifteen principles – and the move from leadership development to system development.</span><span lang="sv">Fyra sorters system, att leda levande system, femton principer – och steget från ledarutveckling till systemutveckling.</span></p>
+            <p class="state"><span lang="en">Coming 2027</span><span lang="sv">Kommer 2027</span></p>
+          </div>
+        </li>
+        <li class="vol">
+          <div class="rail"><span class="dot"></span></div>
+          <div class="body">
+            <p class="no"><span lang="en">Volume IV</span><span lang="sv">Band IV</span></p>
+            <h3><span lang="en">The Field Guide</span><span lang="sv">Fältguiden</span></h3>
+            <p><span lang="en">Sixty tools and programmes, each with steps, facilitator tips, pitfalls, follow-up questions and a blank worksheet.</span><span lang="sv">Sextio verktyg och program, vart och ett med steg, tips till facilitatorn, fallgropar, följdfrågor och en tom arbetsmall.</span></p>
+            <p class="state"><span lang="en">Coming 2027</span><span lang="sv">Kommer 2027</span></p>
+          </div>
+        </li>
+        <li class="vol">
+          <div class="rail"><span class="dot"></span></div>
+          <div class="body">
+            <p class="no"><span lang="en">Volume V</span><span lang="sv">Band V</span></p>
+            <h3><span lang="en">The Cases</span><span lang="sv">Fallen</span></h3>
+            <p><span lang="en">Seven composite journeys, told from contract to ending – with setbacks and traps, not success stories.</span><span lang="sv">Sju sammansatta resor, berättade från kontrakt till avslut – med bakslag och fällor, inte framgångssagor.</span></p>
+            <p class="state"><span lang="en">Coming 2027</span><span lang="sv">Kommer 2027</span></p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="free sec" id="free">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker"><span lang="en">Free</span><span lang="sv">Gratis</span></p>
+        <h2><span lang="en">Start before the book arrives</span><span lang="sv">Börja innan boken kommer</span></h2>
+        <p class="lead" style="margin-top:18px">
+          <span lang="en">Leave your email and I'll send the material, then four short emails over two weeks and news when there is something worth saying. You can unsubscribe at any time.</span>
+          <span lang="sv">Lämna din e-post så skickar jag materialet, sedan fyra korta mejl under två veckor och nyheter när det finns något värt att säga. Du kan avsluta när du vill.</span>
+        </p>
+        <p class="note">
+          <span lang="en">You confirm your address by email, and you can also open the file right away. <a href="#integritet">How your address is handled</a>.</span>
+          <span lang="sv">Du bekräftar din adress via e-post och kan också öppna filen direkt. <a href="#integritet">Så hanteras din adress</a>.</span>
+        </p>
+      </div>
+      <div class="free-grid" id="free-grid"></div>
+      <noscript><p class="note"><a href="https://drive.google.com/file/d/14rTLcR1sHDlBa8iu8BV5gn0USpAk5mtC/view">The Introduction to Volume I (PDF)</a> · <a href="https://drive.google.com/file/d/1NU5qKoh2hF16zODaT0_dMGRgefqevIeq/view">Inledningen ur Band I (PDF)</a></p></noscript>
+    </div>
+  </section>
+
+  <section class="author sec" id="author">
+    <div class="wrap">
+      <div class="grid">
+        <img class="author-photo" src="assets/img/mattias-seger.jpg" alt="Mattias Seger" width="520" height="520">
+        <div>
+          <p class="kicker"><span lang="en">The author</span><span lang="sv">Författaren</span></p>
+          <h2>Mattias Seger</h2>
+          <div class="bio" lang="en">
+            <p>Systems thinker, organisational designer and leadership developer. I have driven change as head of transformation and chief architect in a large government agency, worked with eighteen teams in a global gaming company, and supported a global pharmaceutical company on its way from functional management to cross-functional work.</p>
+            <p>Systemic Actions is my method – systems thinking for leaders in real life, from theory to mastery.</p>
+          </div>
+          <div class="bio" lang="sv">
+            <p>Systemtänkare, organisationsdesigner och ledarutvecklare. Jag har lett förändring som transformationschef och chefsarkitekt i en stor myndighet, arbetat med arton team i ett globalt spelbolag och följt ett globalt läkemedelsbolag på vägen från funktionsstyrning till tvärfunktionellt arbete.</p>
+            <p>Systemic Actions är min metod – systemtänkande för ledare i verkligheten, från teori till mästerskap.</p>
+          </div>
+          <ul class="links">
+            <li><a href="https://www.linkedin.com/in/mattiasseger" rel="noopener"><span class="sr" lang="en">Mattias Seger on </span><span class="sr" lang="sv">Mattias Seger på </span>LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61595844304671" rel="noopener"><span class="sr" lang="en">Mattias Seger on </span><span class="sr" lang="sv">Mattias Seger på </span>Facebook</a></li>
+            <li><a href="https://www.instagram.com/mattias.seger/" rel="noopener"><span class="sr" lang="en">Mattias Seger on </span><span class="sr" lang="sv">Mattias Seger på </span>Instagram</a></li>
+            <li><a href="mailto:mattias@systemicactions.com">mattias@systemicactions.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="priv" id="integritet">
+    <div class="wrap">
       <div lang="en">
-        <p>For more than twenty years I worked in leadership development. From 2012 I began testing new approaches in government agencies, state-owned companies and listed companies, and one lesson kept returning: the diagnosis is systemic, but the efforts often stop at the individual and the group.</p>
-        <p><em>Systemic Actions</em> is what I learned along the way. It is systems thinking for leaders who have to act on Monday morning: how to tell the complicated from the complex, where the leverage points are, which structures you are prepared to change, and how what your leaders discover can reach the people who can change the conditions.</p>
+        <h2>How your email address is handled</h2>
+        <p>Mattias Seger is the data controller. I process your address on the basis of your consent, which you can withdraw at any time.</p>
+        <p>When you ask for material, I send one email asking you to confirm your address. Nothing is stored until you confirm. Once you do, you receive the material, four short emails over two weeks, and then news when there is something worth saying. You can unsubscribe at any time with one click. The material is also available directly from the page after you submit the form.</p>
+        <p>Your address is stored with Resend, the delivery service that sends the emails. Resend is a US company, so a transfer outside the EU/EEA can occur. I keep your address until you unsubscribe or ask me to delete it.</p>
+        <p>You can ask to see, correct or delete what I hold about you by writing to <a href="mailto:mattias@systemicactions.com">mattias@systemicactions.com</a>, and you can complain to the Swedish Authority for Privacy Protection (IMY). The page remembers your language choice in your browser. It sets no cookies and runs no analytics; the material opens on Google Drive, which has its own terms.</p>
       </div>
       <div lang="sv">
-        <p>I mer än tjugo år arbetade jag med ledarutveckling. Från 2012 började jag pröva nya grepp i myndigheter, statliga bolag och publika bolag, och en lärdom kom tillbaka gång på gång: diagnosen är systemisk, men insatserna stannar ofta på individ- och gruppnivå.</p>
-        <p><em>Systemic Actions</em> är det jag lärde mig på vägen. Det är systemtänkande för ledare som ska agera på måndag morgon: hur du skiljer det komplicerade från det komplexa, var hävstängerna finns, vilka strukturer du är beredd att ändra och hur det dina ledare upptäcker kan nå dem som kan ändra förutsättningarna.</p>
+        <h2>Så hanteras din e-postadress</h2>
+        <p>Personuppgiftsansvarig är Mattias Seger. Jag behandlar din adress med ditt samtycke, som du kan ta tillbaka när du vill.</p>
+        <p>När du ber om material skickar jag ett mejl där du bekräftar din adress. Inget sparas förrän du har bekräftat. När du har gjort det får du materialet, fyra korta mejl under två veckor och sedan nyheter när det finns något värt att säga. Du kan avsluta med ett klick när du vill. Materialet går också att öppna direkt från sidan när du har skickat formuläret.</p>
+        <p>Din adress lagras hos Resend, utskickstjänsten som skickar mejlen. Resend är ett amerikanskt bolag, så en överföring utanför EU/EES kan förekomma. Jag sparar din adress tills du avregistrerar dig eller ber mig radera den.</p>
+        <p>Du kan be att få se, rätta eller radera det jag har om dig genom att skriva till <a href="mailto:mattias@systemicactions.com">mattias@systemicactions.com</a>, och du kan klaga hos Integritetsskyddsmyndigheten (IMY). Sidan minns ditt språkval i din webbläsare. Den sätter inga kakor och kör ingen analys; materialet öppnas på Google Drive, som har egna villkor.</p>
       </div>
     </div>
-    <figure class="idea-img">
-      <img src="/assets/img/loops.jpg" alt="" loading="lazy">
-    </figure>
   </section>
-
-  <!-- THE SERIES -->
-  <section class="series" id="series">
-    <div class="section-head">
-      <p class="label"><span lang="en">The series</span><span lang="sv">Serien</span></p>
-      <h2>
-        <span lang="en">Five volumes, one journey</span>
-        <span lang="sv">Fem band, en resa</span>
-      </h2>
-      <p class="lead">
-        <span lang="en">From seeing the whole, to the patterns that connect, to action – with a field guide of tools and seven cases that follow the work from contract to ending.</span>
-        <span lang="sv">Från att se helheten, via mönstren som förbinder, till handling – med en fältguide full av verktyg och sju fall som följer arbetet från kontrakt till avslut.</span>
-      </p>
-    </div>
-
-    <article class="book book-featured">
-      <div class="book-num">I</div>
-      <div class="book-body">
-        <p class="book-status">
-          <span lang="en">Published 19 January 2027 · pre-order from 1 December 2026</span>
-          <span lang="sv">Engelska utgåvan 19 januari 2027 · svenska utgåvan våren 2027</span>
-        </p>
-        <h3><span lang="en">Seeing the Whole</span><span lang="sv">Att se helheten</span></h3>
-        <p>
-          <span lang="en">Complexity and systems thinking, what they are and why they matter to every leader. From VUCA to PUMO, the leader's three capabilities across five dimensions, and the seven organisations whose journeys run through the whole series.</span>
-          <span lang="sv">Komplexitet och systemtänkande, vad det är och varför det angår varje ledare. Från VUCA till PUMO, ledarskapets tre förmågor i fem dimensioner och de sju organisationer vars resor löper genom hela serien.</span>
-        </p>
-        <p class="book-meta">
-          <span lang="en">Landscape, full colour, 480 pages · Paperback $69 · Hardcover $119 · Amazon and other bookshops</span>
-          <span lang="sv">Liggande format i fyrfärg · Engelska utgåvan: häftad $69, inbunden $119, via Amazon och andra bokhandlar</span>
-        </p>
-      </div>
-    </article>
-
-    <div class="book-grid">
-      <article class="book">
-        <div class="book-num">II</div>
-        <h3><span lang="en">The Patterns That Connect</span><span lang="sv">Mönstren som förbinder</span></h3>
-        <p><span lang="en">Physics, networks, the human systems – and the patterns behind the seven cases.</span><span lang="sv">Fysik, nätverk, människans system – och mönstren bakom de sju fallen.</span></p>
-        <p class="book-status"><span lang="en">Coming 2027</span><span lang="sv">Kommer 2027</span></p>
-      </article>
-      <article class="book">
-        <div class="book-num">III</div>
-        <h3><span lang="en">From Insight to Action</span><span lang="sv">Från insikt till handling</span></h3>
-        <p><span lang="en">Four kinds of systems, leading living systems, fifteen principles – and the move from leadership development to system development.</span><span lang="sv">Fyra sorters system, att leda levande system, femton principer – och steget från ledarutveckling till systemutveckling.</span></p>
-        <p class="book-status"><span lang="en">Coming 2027</span><span lang="sv">Kommer 2027</span></p>
-      </article>
-      <article class="book">
-        <div class="book-num">IV</div>
-        <h3><span lang="en">The Field Guide</span><span lang="sv">Fältguiden</span></h3>
-        <p><span lang="en">Sixty tools and programmes, each with steps, facilitator tips, pitfalls, follow-up questions and a blank worksheet.</span><span lang="sv">Sextio verktyg och program, vart och ett med steg, tips till facilitatorn, fallgropar, följdfrågor och en tom arbetsmall.</span></p>
-        <p class="book-status"><span lang="en">Coming 2027</span><span lang="sv">Kommer 2027</span></p>
-      </article>
-      <article class="book">
-        <div class="book-num">V</div>
-        <h3><span lang="en">The Cases</span><span lang="sv">Fallen</span></h3>
-        <p><span lang="en">Seven composite journeys, told from contract to ending – with setbacks and traps, not success stories.</span><span lang="sv">Sju sammansatta resor, berättade från kontrakt till avslut – med bakslag och fällor, inte framgångssagor.</span></p>
-        <p class="book-status"><span lang="en">Coming 2027</span><span lang="sv">Kommer 2027</span></p>
-      </article>
-    </div>
-  </section>
-
-  <!-- FREE -->
-  <section class="free" id="free">
-    <div class="section-head">
-      <p class="label"><span lang="en">Free</span><span lang="sv">Gratis</span></p>
-      <h2>
-        <span lang="en">Start before the book arrives</span>
-        <span lang="sv">Börja innan boken kommer</span>
-      </h2>
-      <p class="lead">
-        <span lang="en">Leave your email and I'll send the material, plus an occasional letter about the series. You can unsubscribe at any time.</span>
-        <span lang="sv">Lämna din e-post så skickar jag materialet och då och då ett brev om serien. Du kan avsluta när du vill.</span>
-      </p>
-    </div>
-    <div class="free-grid" id="free-grid"><!-- filled by script per language --></div>
-  </section>
-
-  <!-- AUTHOR -->
-  <section class="author" id="author">
-    <img class="author-photo" src="/assets/img/mattias-seger.jpg" alt="Mattias Seger" loading="lazy" width="260" height="260">
-    <div class="author-text">
-      <p class="label"><span lang="en">The author</span><span lang="sv">Författaren</span></p>
-      <h2>Mattias Seger</h2>
-      <div lang="en">
-        <p>Systems thinker, organisational designer and leadership developer. I have led transformation as head of transformation and chief architect in a large government agency, worked with eighteen teams in a global gaming company, and supported a global pharmaceutical company on its way from functional management to cross-functional work.</p>
-        <p>Systemic Actions is my method – systems thinking for leaders in real life, from theory to mastery.</p>
-      </div>
-      <div lang="sv">
-        <p>Systemtänkare, organisationsdesigner och ledarutvecklare. Jag har lett förändring som transformationschef och chefsarkitekt i en stor myndighet, arbetat med arton team i ett globalt spelbolag och följt ett globalt läkemedelsbolag på vägen från funktionsstyrning till tvärfunktionellt arbete.</p>
-        <p>Systemic Actions är min metod – systemtänkande för ledare i verkligheten, från teori till mästerskap.</p>
-      </div>
-      <ul class="links">
-        <li><a href="https://www.linkedin.com/in/mattiasseger" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=61595844304671" rel="noopener">Facebook</a></li>
-        <li><a href="https://www.instagram.com/mattias.seger/" rel="noopener">Instagram</a></li>
-        <li><a href="mailto:mattias@systemicactions.com">mattias@systemicactions.com</a></li>
-      </ul>
-    </div>
-  </section>
-
 </main>
 
 <footer class="footer">
-  <p>© 2026 Mattias Seger · Systemic Actions</p>
-  <p>
-    <a href="https://www.instagram.com/systemic.actions/" rel="noopener">@systemic.actions</a> ·
-    <a href="https://www.facebook.com/profile.php?id=61595760519164" rel="noopener">Facebook</a>
-  </p>
+  <div class="wrap">
+    <img class="wordmark" src="assets/logos/ledarskap-ordmarke-skog.svg" alt="Mattias Seger · Ledarskapsböcker">
+    <p>© 2026 Mattias Seger · Systemic Actions</p>
+    <p>
+      <a href="https://www.instagram.com/systemic.actions/" rel="noopener"><span lang="en">Systemic Actions on Instagram</span><span lang="sv">Systemic Actions på Instagram</span></a> ·
+      <a href="https://www.facebook.com/profile.php?id=61595760519164" rel="noopener"><span lang="en">Systemic Actions on Facebook</span><span lang="sv">Systemic Actions på Facebook</span></a> ·
+      <a href="#integritet"><span lang="en">Privacy</span><span lang="sv">Integritet</span></a>
+    </p>
+    <p class="ai">
+      <span lang="en">Generated by AI, Directed by MS. The design, code and texts of this page, the loop figure and the image at the top of the page were produced with AI.</span>
+      <span lang="sv">Generated by AI, Directed by MS. Sidans formgivning, kod och texter, slingfiguren och bilden högst upp är framtagna med AI.</span>
+    </p>
+  </div>
 </footer>
 
-<script src="/assets/site.js?v=2" defer></script>
+<script>
+(function () {
+  'use strict';
+  /* Free material: same keys as the live site's /api/subscribe (double opt-in through Resend). */
+  var drive = function (id) { return 'https://drive.google.com/file/d/' + id + '/view'; };
+  var FREEBIES = {
+    en: [
+      { key: 'F4_EN', file: drive('14rTLcR1sHDlBa8iu8BV5gn0USpAk5mtC'), tag: 'Free sample', title: 'The Introduction to Volume I',
+        text: 'What complexity and systems thinking are, why they matter to every leader, and what they mean on an ordinary Monday.' },
+      { key: 'F1_EN', file: drive('1ifKPqPQ6WI6BqLtYrbivazYWiNfPfr13'), tag: 'One page', title: 'Seven Questions Before Any Change Initiative',
+        text: 'Most change efforts are decided before the first workshop – by the setup, not the content. The seven questions I ask first.' },
+      { key: 'F3_EN', file: drive('12AuNYR-MczBAMndwZjHbbEoe_7BsVhJC'), tag: 'Self-check', title: 'Complicated or Complex?',
+        text: 'A ten-minute self-check for telling a recipe from a rocket from raising a child – and choosing how to lead accordingly.' },
+      { key: 'F2_EN', file: drive('1NXSgR92SkTWwV9Fe0Q_PPQS88vrm73Hi'), tag: 'Canvas', title: 'Systems Map Canvas',
+        text: 'A canvas for drawing the loop you keep getting caught in: what drives it, what slows it and where to intervene.' }
+    ],
+    sv: [
+      { key: 'F4_SV', file: drive('1NU5qKoh2hF16zODaT0_dMGRgefqevIeq'), tag: 'Provläsning', title: 'Inledningen ur Band I',
+        text: 'Vad komplexitet och systemtänkande är, varför det angår varje ledare och vad det betyder en vanlig måndag.' },
+      { key: 'F1_SV', file: drive('1xtvTsxO56sAU0Gij9GWRobXiN1vz2Vo_'), tag: 'En sida', title: 'Sju frågor före varje förändringsinitiativ',
+        text: 'De flesta förändringar avgörs före första workshopen – av upplägget, inte innehållet. De sju frågor jag ställer först.' },
+      { key: 'F3_SV', file: drive('1-4k0-5PdddGJXudctKigwuEpKmbU7sOy'), tag: 'Självtest', title: 'Komplicerat eller komplext?',
+        text: 'Ett självtest på tio minuter: recept, raket eller barn – och hur du väljer att leda därefter.' },
+      { key: 'F2_SV', file: drive('1VyqGlMV7EEt9yrD-KlKWTHB1Y3NmMNcO'), tag: 'Arbetsyta', title: 'Systemkartan',
+        text: 'En arbetsyta för att rita slingan ni fastnar i: vad som driver den, vad som bromsar och var ni kan gripa in.' },
+      { key: 'F5_SV', file: drive('1Dpe7z6mIrQSjUoJYYhqJwkOGktuTs6pF'), tag: 'Fältguiden', title: 'Fem verktyg att börja med',
+        text: 'Fem verktyg ur Fältguiden med steg, tips och arbetsmall – att använda i nästa möte.' }
+    ]
+  };
+  var UI = {
+    en: { placeholder: 'Your email', send: 'Send it to me', more: 'More material', sending: 'Sending…',
+          ok: 'Thank you! Check your inbox and confirm your address. You can also open it right away: ',
+          fail: 'The sign-up didn’t go through just now, but here it is anyway: ', open: 'open the PDF',
+          invalid: 'Please enter a valid email address.' },
+    sv: { placeholder: 'Din e-post', send: 'Skicka till mig', more: 'Mer material', sending: 'Skickar…',
+          ok: 'Tack! Titta i inkorgen och bekräfta din adress. Du kan också öppna det direkt: ',
+          fail: 'Anmälan gick inte igenom just nu, men här är materialet ändå: ', open: 'öppna pdf:en',
+          invalid: 'Skriv en giltig e-postadress.' }
+  };
+  var root = document.documentElement, grid = document.getElementById('free-grid');
+  function el(tag, attrs, text) {
+    var n = document.createElement(tag);
+    for (var k in attrs || {}) n.setAttribute(k, attrs[k]);
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function message(box, lead, href, label) {
+    box.textContent = lead;
+    box.appendChild(el('a', { href: href, target: '_blank', rel: 'noopener' }, label));
+  }
+  var typed = { i: -1, v: '' };
+  function renderFreebies(lang) {
+    var t = UI[lang];
+    grid.textContent = '';
+    grid.classList.toggle('rest-odd', (FREEBIES[lang].length - 1) % 2 === 1);
+    FREEBIES[lang].forEach(function (f, i) {
+      if (i === 1) grid.appendChild(el('h3', { 'class': 'more' }, t.more));
+      var card = el('article', { 'class': 'freebie' + (i === 0 ? ' featured' : '') });
+      if (i === 0) card.id = 'intro';
+      card.appendChild(el('p', { 'class': 'tag' }, f.tag));
+      card.appendChild(el('h3', null, f.title));
+      card.appendChild(el('p', null, f.text));
+      var form = el('form', { novalidate: '' });
+      var id = 'email-' + lang + '-' + i;
+      var label = el('label', { 'for': id, 'class': 'hp' }, t.placeholder + ' – ' + f.title);
+      var input = el('input', { type: 'email', id: id, name: 'email', placeholder: t.placeholder, autocomplete: 'email', required: '' });
+      var trap = el('input', { type: 'text', name: 'website', tabindex: '-1', autocomplete: 'off', 'class': 'hp', 'aria-hidden': 'true' });
+      var btn = el('button', { type: 'submit', 'class': 'btn btn-primary', 'aria-label': t.send + ': ' + f.title }, t.send);
+      if (typed.i === i) input.value = typed.v;
+      input.addEventListener('input', function () { typed = { i: i, v: input.value }; });
+      var msg = el('p', { 'class': 'msg', role: 'status', 'aria-live': 'polite' });
+      form.appendChild(label); form.appendChild(input); form.appendChild(trap); form.appendChild(btn);
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (trap.value) return;
+        var email = input.value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.textContent = t.invalid; input.focus(); return; }
+        btn.disabled = true; btn.textContent = t.sending;
+        fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, key: f.key, website: trap.value }) })
+          .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+          .then(function (d) { if (!d || !d.ok) throw new Error('rejected'); form.remove(); message(msg, t.ok, f.file, t.open); })
+          .catch(function () { btn.disabled = false; btn.textContent = t.send; message(msg, t.fail, f.file, t.open); });
+      });
+      card.appendChild(form); card.appendChild(msg); grid.appendChild(card);
+    });
+  }
+  function setLang(lang, save) {
+    root.setAttribute('data-lang', lang); root.lang = lang;
+    document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === lang));
+    });
+    var hero = document.getElementById('hero-img');
+    if (hero) hero.setAttribute('alt', hero.getAttribute('data-alt-' + lang) || '');
+    var fig = document.getElementById('loop-fig');
+    if (fig) fig.setAttribute('aria-label', fig.getAttribute('data-label-' + lang) || '');
+    renderFreebies(lang);
+    if (save) {
+      try { localStorage.setItem('sa-lang', lang); } catch (e) {}
+      try { history.replaceState(null, '', '?lang=' + lang + location.hash); } catch (e) {}
+    }
+  }
+  document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-set-lang'), true); });
+  });
+  setLang(root.getAttribute('data-lang') === 'sv' ? 'sv' : 'en', false);
+})();
+</script>
+
 </body>
 </html>
