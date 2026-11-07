@@ -22,6 +22,16 @@ const MAIL_RE = /^[^\s@,;<>"]+@[^\s@,;<>"]+\.[^\s@,;<>"]+$/;
 const clean = (v, max) => String(v == null ? '' : v).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '').trim().slice(0, max);
 const oneLine = (v, max) => clean(v, max).replace(/[\r\n]+/g, ' ');
 
+// Best-effort rate limit per warm instance (no shared store): 5 per IP per hour.
+const HITS = new Map();
+function limited(ip) {
+  const now = Date.now(), win = 3600e3;
+  const list = (HITS.get(ip) || []).filter((t) => now - t < win);
+  list.push(now); HITS.set(ip, list);
+  if (HITS.size > 5000) HITS.clear();
+  return list.length > 5;
+}
+
 function safeJson(s) { try { return JSON.parse(s); } catch (e) { return {}; } }
 
 module.exports = async (req, res) => {
@@ -29,6 +39,8 @@ module.exports = async (req, res) => {
   const b = typeof req.body === 'string' ? safeJson(req.body) : (req.body || {});
   const origin = req.headers && req.headers.origin;
   if (origin && !ORIGINS.includes(origin) && !/^https:\/\/[a-z0-9-]+\.vercel\.app$/.test(origin) && !/^http:\/\/localhost(:\d+)?$/.test(origin)) return res.status(403).json({ ok: false });
+  const ip = String((req.headers && (req.headers['x-real-ip'] || req.headers['x-forwarded-for'])) || '').split(',')[0].trim();
+  if (ip && limited(ip)) return res.status(429).json({ ok: false, error: 'rate_limited' });
   if (b.website) return res.status(200).json({ ok: true }); // honeypot
   const age = Date.now() - Number(b.t);
   if (!(age >= 3000)) return res.status(400).json({ ok: false, error: 'too_fast' }); // sent less than 3 s after page load, or no timestamp
