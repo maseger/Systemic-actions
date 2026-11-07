@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://systemicactions.com/resellers">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://systemicactions.com/resellers">
+<meta property="og:title" content="Resellers – Systemic Actions, Volume I, Seeing the Whole">
+<meta property="og:description" content="For bookshops, libraries and other resellers: facts about Volume I, Seeing the Whole (19 January 2027), and how to register.">
+<meta property="og:image" content="https://systemicactions.com/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<title>Resellers – Systemic Actions · Mattias Seger</title>
+<meta name="description" content="For bookshops, libraries and other resellers: facts about Systemic Actions, Volume I, Seeing the Whole (English edition 19 January 2027), and how to register.">
+<style>
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:200 800;font-display:swap;src:url(/assets/fonts/newsreader-var-normal.woff2) format("woff2")}
+@font-face{font-family:"Newsreader";font-style:italic;font-weight:200 800;font-display:swap;src:url(/assets/fonts/newsreader-var-italic.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2")}
+/* Layout: a quiet book-like page. One photographic moment (the hero, text only on the glass plate),
+   then paper, forest and copper line. Tokens follow the design system "Mattias Seger · Ledarskapsböcker":
+   papper (light) and skog (dark). */
+:root {
+  --bg: #F1EDE4;          /* lb-paper */
+  --bg2: #E6E0D2;         /* lb-paper2 */
+  --ink: #1B2320;         /* lb-ink */
+  --soft: #4E5853;        /* lb-soft */
+  --hair: #C9C2B2;        /* lb-hair */
+  --copper: #8A4520;      /* lb-copperD: copper text on paper */
+  --copper-line: #A65A2E; /* lb-copper: illustration line */
+  --btn-bg: #8A4520;
+  --btn-fg: #F1EDE4;
+  --field: #F1EDE4;
+  --field-line: #6F7973;  /* input border, 3.4:1 on paper2 */
+  --band-bg: #183229;     /* lb-forest */
+  --band-ink: #ECE7DC;    /* lb-onF */
+  --band-soft: #AFBBB3;   /* lb-onFs */
+  --band-line: #3F6457;   /* lb-lineF */
+  --band-copper: #E0A57A; /* lb-copperL */
+  --forest: #183229;
+  --glass: rgba(12, 20, 18, .55);
+  --glass-line: #ECE7DC;
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+  --wrap: 1120px;
+  --radius: 6px;           /* lb-radie-ruta */
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #183229; --bg2: #22433A; --ink: #ECE7DC; --soft: #AFBBB3; --hair: #3F6457;
+    --copper: #E0A57A; --copper-line: #E0A57A; --btn-bg: #E0A57A; --btn-fg: #183229; --field: #183229; --field-line: #7FA192;
+    --band-bg: #22433A; --band-line: #5F8576; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #183229; --bg2: #22433A; --ink: #ECE7DC; --soft: #AFBBB3; --hair: #3F6457;
+  --copper: #E0A57A; --copper-line: #E0A57A; --btn-bg: #E0A57A; --btn-fg: #183229; --field: #183229; --field-line: #7FA192;
+  --band-bg: #22433A; --band-line: #5F8576; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--serif); font-size: 19px; line-height: 1.6;
+  font-optical-sizing: auto; -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--forest); z-index: 30; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; font-weight: 330; line-height: 1.12; text-wrap: balance; }
+p { margin: 0 0 1em; }
+:focus-visible { outline: 2px solid var(--copper-line); outline-offset: 3px; }
+.band :focus-visible, .nav :focus-visible, .plate :focus-visible, .footer :focus-visible { outline-color: var(--band-copper); }
+
+/* language: only the active language is shown */
+html[data-lang="en"] [lang="sv"], html[data-lang="sv"] [lang="en"] { display: none !important; }
+
+.wrap {
+  max-width: calc(var(--wrap) + 32px); margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.skip { position: absolute; left: -9999px; top: 8px; background: var(--forest); color: var(--band-ink); padding: 8px 14px; z-index: 40; border-radius: var(--radius); }
+.skip:focus { left: 16px; }
+
+.kicker { font: 400 12px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--copper); margin: 0 0 18px; }
+
+/* NAV */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--forest); color: var(--band-ink); border-bottom: 1px solid var(--band-line); }
+.nav .wrap { display: flex; align-items: center; gap: 22px; min-height: 60px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand img { width: 34px; height: 34px; }
+.brand span { font: 500 12px/1 var(--mono); letter-spacing: .24em; text-transform: uppercase; color: var(--band-copper); }
+.nav-links { display: flex; gap: 24px; margin-left: auto; }
+.nav-links a { text-decoration: none; font-size: 16px; color: var(--band-ink); }
+.nav-links a:hover { color: var(--band-copper); }
+.lang { display: flex; border: 1px solid var(--band-line); border-radius: var(--radius); overflow: hidden; }
+.lang button { font: 400 12px/1 var(--mono); letter-spacing: .12em; background: none; border: 0; color: var(--band-ink); padding: 8px 12px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--band-copper); color: var(--forest); }
+
+/* HERO: LbFyrfargsbild-style image, text only on the glass plate (LbVersband) */
+.hero { position: relative; background: var(--forest); min-height: clamp(560px, 50vw, 720px); display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; }
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+.hero .wrap { position: relative; width: 100%; padding-block: clamp(32px, 5vw, 56px); display: flex; justify-content: center; }
+.plate {
+  position: relative; width: min(700px, 100%); padding: 40px 48px 42px;
+  background: var(--glass); border: 1px solid rgba(225, 214, 196, .35); border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); color: var(--band-ink);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .plate { background: rgba(12, 20, 18, .84); } }
+.plate::before, .plate::after { content: ""; position: absolute; left: 18px; right: 18px; height: 1.5px; background: var(--glass-line); opacity: .8; }
+.plate::before { top: 12px; } .plate::after { bottom: 12px; }
+.plate .kicker { color: var(--band-copper); }
+.plate h1 { font-size: clamp(38px, 5.2vw, 60px); }
+.plate h1 em { display: block; font-style: italic; color: var(--band-copper); font-size: .8em; margin-top: 4px; }
+.plate .sub { font-size: clamp(19px, 2vw, 22px); font-style: italic; margin: 22px 0 8px; }
+.plate .date { font: 400 12px/1.5 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--band-soft); margin: 0; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn { display: inline-block; font: 500 13.5px/1 var(--mono); letter-spacing: .05em; text-decoration: none; padding: 15px 20px; border-radius: var(--radius); border: 1px solid transparent; cursor: pointer; }
+.btn-primary { background: var(--band-copper); color: var(--forest); }
+.btn-primary:hover { filter: brightness(1.1); }
+.btn-ghost { border-color: rgba(236, 231, 220, .5); color: var(--band-ink); }
+.btn-ghost:hover { border-color: var(--band-ink); }
+
+section, .freebie { scroll-margin-top: 84px; }
+.sec { padding-block: clamp(72px, 9vw, 120px); }
+h2 { font-size: clamp(32px, 4.2vw, 48px); font-weight: 400; }
+.lead { font-size: 21px; color: var(--soft); max-width: 40em; }
+
+/* IDEA */
+.idea .grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 24px clamp(40px, 7vw, 96px); align-items: start; }
+.idea blockquote { margin: 0 0 36px; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.22; font-style: italic; font-weight: 340; text-wrap: balance; }
+.idea .text p { color: var(--soft); max-width: 36em; }
+.idea .text em { color: var(--ink); }
+.fig { margin: 0; }
+.fig svg { width: 100%; height: auto; overflow: visible; }
+.fig figcaption { font-style: italic; font-size: 14.5px; line-height: 1.4; color: var(--soft); margin-top: 10px; text-align: center; }
+.fig .ln { fill: none; stroke: var(--copper-line); stroke-width: 1; }
+.fig .ln-b { fill: none; stroke: var(--copper-line); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.fig .nd { fill: var(--copper-line); }
+.fig .lb { font: italic 400 17px var(--serif); fill: var(--ink); }
+.fig .lb-s { font: italic 400 15px var(--serif); fill: var(--soft); }
+
+/* SERIES (dark band) */
+.band { background: var(--band-bg); color: var(--band-ink); }
+.band .kicker { color: var(--band-copper); }
+.band .lead { color: var(--band-soft); }
+.series .head { max-width: 720px; margin-bottom: 56px; }
+.route { list-style: none; margin: 0; padding: 0; }
+.vol { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 20px; }
+.vol .rail { position: relative; display: flex; justify-content: center; }
+.vol .rail::before { content: ""; position: absolute; top: 14px; bottom: -14px; left: 50%; width: 1px; background: var(--band-line); }
+.vol:last-child .rail::before { display: none; }
+.vol .dot { position: relative; margin-top: 8px; width: 13px; height: 13px; border-radius: 50%; border: 1.4px solid var(--band-copper); background: var(--band-bg); }
+.vol.on .dot { background: var(--band-copper); }
+.vol .body { padding-bottom: 44px; }
+.vol .no { font: 400 12px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--band-copper); margin: 4px 0 8px; }
+.vol h3 { font-size: clamp(26px, 3vw, 34px); font-weight: 380; margin-bottom: 10px; }
+.vol p { color: var(--band-ink); max-width: 40em; margin-bottom: 10px; }
+.vol .state { font: 400 12px/1.5 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--band-copper); margin: 0; }
+.vol.on .body { background: rgba(12, 20, 18, .28); border: 1px solid var(--band-line); border-radius: var(--radius); padding: 30px 32px; margin-bottom: 44px; }
+.vol.on h3 { font-size: clamp(34px, 4.4vw, 48px); }
+.vol.on .spec { font: 400 13px/1.6 var(--mono); letter-spacing: .02em; color: var(--band-soft); margin: 14px 0 0; }
+.vol.on .state { margin-bottom: 14px; }
+.vol .act { margin: 18px 0 0; }
+
+/* FREE */
+.free .head { max-width: 720px; margin-bottom: 48px; }
+.free-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.free-grid .featured, .free-grid .more { grid-column: 1 / -1; }
+.free-grid .featured p { max-width: 38em; }
+.free-grid.rest-odd .freebie:last-child { grid-column: 1 / -1; }
+.free-grid .more { font-size: 15px; font-weight: 400; font-family: var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--copper); margin-top: 20px; }
+.free .note { font-size: 16px; color: var(--soft); max-width: 40em; margin: 18px 0 0; }
+.free .note a, .priv a { color: var(--copper); }
+.priv { padding-block: clamp(56px, 7vw, 88px); border-top: 1px solid var(--hair); }
+.priv h2 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 18px; }
+.priv p { color: var(--soft); max-width: 40em; }
+.freebie { display: flex; flex-direction: column; min-width: 0; background: var(--bg2); border-radius: var(--radius); padding: 28px 28px 26px; }
+.freebie .tag { font: 400 12px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--copper); margin: 0 0 10px; }
+.freebie h3 { font-size: 27px; font-weight: 400; margin-bottom: 10px; }
+.freebie p { color: var(--soft); font-size: 17px; flex: 1; }
+.freebie form { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; max-width: 520px; }
+.freebie input[type=email] { flex: 1 1 190px; min-width: 0; font: 400 16px var(--serif); padding: 13px 14px; border: 1px solid var(--field-line); border-radius: var(--radius); background: var(--field); color: var(--ink); }
+.freebie .btn-primary { background: var(--btn-bg); color: var(--btn-fg); }
+.freebie .btn-primary:hover { filter: brightness(1.12); }
+.freebie .btn[disabled] { opacity: .6; cursor: default; }
+.freebie .msg { font-size: 16px; margin: 12px 0 0; color: var(--ink); }
+.freebie .msg:empty { display: none; }
+.freebie .msg a { color: var(--copper); }
+.hp { position: absolute; left: -9999px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* AUTHOR */
+.author { background: var(--bg2); }
+.author .grid { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
+.author-photo { width: 100%; max-width: 280px; aspect-ratio: 1; object-fit: cover; }
+.author h2 { margin-bottom: 20px; }
+.author .bio p { color: var(--soft); max-width: 38em; }
+.author .bio p:first-child { color: var(--ink); }
+.links { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 10px 24px; font: 400 14px/1.4 var(--mono); }
+.links a { text-decoration-color: var(--copper-line); text-underline-offset: 4px; }
+
+/* FOOTER */
+.footer { background: var(--forest); border-top: 1px solid var(--band-line); color: var(--band-soft); padding-block: 40px; font: 400 14px/1.7 var(--mono); letter-spacing: .03em; }
+.footer .wrap { display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; }
+.footer .wordmark { width: 280px; max-width: 100%; height: auto; }
+.footer p { margin: 0; }
+.footer a { color: var(--band-copper); }
+.footer .ai { flex-basis: 100%; border-top: 1px solid var(--band-line); padding-top: 18px; }
+
+@media (max-width: 900px) {
+  body { font-size: 18px; }
+  .idea .grid, .author .grid { grid-template-columns: minmax(0, 1fr); }
+  .fig { max-width: 420px; }
+  .author-photo { max-width: 200px; }
+  .free-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 680px) {
+  .nav .wrap { gap: 12px; }
+  .brand span { display: none; }
+  .nav-links { gap: 0; }
+  .nav-links a:not([href="#free"]) { display: none; }
+  .nav-links a { font-size: 15px; }
+  .hero { min-height: 0; }
+  .hero > img { position: relative; height: 260px; }
+  .hero .wrap { margin-top: -88px; padding-block: 0 32px; }
+  .plate { padding: 32px 24px 34px; background: rgba(12, 20, 18, .82); }
+  .vol { grid-template-columns: 28px minmax(0, 1fr); column-gap: 12px; }
+  .vol.on .body { padding: 22px 20px; }
+  .freebie { padding: 22px 20px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* RESELLER PAGE */
+.rhero { background: var(--forest); color: var(--band-ink); padding-block: clamp(64px, 9vw, 112px); border-bottom: 1px solid var(--band-line); }
+.rhero .kicker { color: var(--band-copper); }
+.rhero h1 { font-size: clamp(38px, 5.4vw, 64px); max-width: 15em; }
+.rhero h1 em { display: block; font-style: italic; color: var(--band-copper); font-size: .78em; margin-top: 6px; }
+.rhero .sub { font-size: clamp(19px, 2vw, 22px); font-style: italic; color: var(--band-soft); max-width: 36em; margin: 24px 0 0; }
+.rhero .cta { margin-top: 32px; }
+.facts { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px clamp(40px, 7vw, 96px); align-items: start; }
+.spec-list { margin: 0; padding: 0; border-top: 1px solid var(--hair); }
+.spec-list div { display: grid; grid-template-columns: minmax(0, 11em) minmax(0, 1fr); gap: 4px 20px; padding: 14px 0; border-bottom: 1px solid var(--hair); }
+.spec-list dt { font: 400 12px/1.6 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--copper); padding-top: 3px; }
+.spec-list dd { margin: 0; font-size: 18px; }
+.spec-list dd small { display: block; font-size: 15px; color: var(--soft); }
+.facts .side p { color: var(--soft); max-width: 30em; }
+.facts .side h3 { font-size: 26px; font-weight: 400; margin-bottom: 12px; }
+.facts .side a { color: var(--copper); }
+.steps { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; counter-reset: s; }
+.steps li { counter-increment: s; border: 1px solid var(--band-line); border-radius: var(--radius); padding: 26px 24px; background: rgba(12, 20, 18, .28); }
+.steps li::before { content: "0" counter(s); display: block; font: 400 12px/1.3 var(--mono); letter-spacing: .16em; color: var(--band-copper); margin-bottom: 12px; }
+.steps h3 { font-size: 24px; font-weight: 400; margin-bottom: 8px; }
+.steps p { color: var(--band-soft); margin: 0; font-size: 17px; }
+.reg .head { max-width: 720px; margin-bottom: 40px; }
+.rform { max-width: 760px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 20px; }
+.rform .full { grid-column: 1 / -1; }
+.rform label { display: block; font: 400 12px/1.4 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--soft); margin-bottom: 6px; }
+.rform input[type=text], .rform input[type=email], .rform select, .rform textarea {
+  width: 100%; font: 400 17px var(--serif); padding: 12px 14px; border: 1px solid var(--field-line); border-radius: var(--radius); background: var(--field); color: var(--ink);
+}
+.rform textarea { min-height: 120px; resize: vertical; }
+.rform .check { display: flex; gap: 12px; align-items: flex-start; }
+.rform .check input { margin-top: 6px; width: 18px; height: 18px; flex: none; accent-color: var(--btn-bg); }
+.rform .check span { font-size: 16px; color: var(--soft); }
+.rform .check a { color: var(--copper); }
+.rform .btn-primary { background: var(--btn-bg); color: var(--btn-fg); justify-self: start; }
+.rform .btn-primary:hover { filter: brightness(1.12); }
+.rform .btn[disabled] { opacity: .6; cursor: default; }
+.rform .msg { font-size: 17px; margin: 0; color: var(--ink); }
+.rform .msg:empty { display: none; }
+.rform .msg.err { color: var(--copper); }
+.alt { font-size: 16px; color: var(--soft); max-width: 40em; margin: 24px 0 0; }
+.alt a { color: var(--copper); }
+.back { font: 400 14px/1.4 var(--mono); letter-spacing: .05em; }
+@media (max-width: 900px) {
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 680px) {
+  .rform { grid-template-columns: minmax(0, 1fr); }
+  .spec-list div { grid-template-columns: minmax(0, 1fr); }
+  .nav-links a:not([href="#register"]) { display: none; }
+  .nav-links a[href="#register"] { display: inline; }
+}
+</style>
+</head>
+<body>
+
+<script>
+/* choose language before first paint: saved choice, else browser language */
+(function () {
+  var l = null, q = null;
+  try { q = (/[?&]lang=(sv|en)\b/.exec(location.search) || [])[1] || null; } catch (e) {}
+  try { l = q || localStorage.getItem('sa-lang'); } catch (e) { l = q; }
+  if (l !== 'sv' && l !== 'en') l = /^sv/i.test(navigator.language || '') ? 'sv' : 'en';
+  document.documentElement.setAttribute('data-lang', l);
+  document.documentElement.lang = l;
+})();
+</script>
+
+<a class="skip" href="#main"><span lang="en">Skip to content</span><span lang="sv">Hoppa till innehållet</span></a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Systemic Actions">
+      <img src="assets/logos/ledarskap-monogram.svg" alt="" width="34" height="34">
+      <span>Systemic Actions</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#book"><span lang="en">The book</span><span lang="sv">Boken</span></a>
+      <a href="#order"><span lang="en">Ordering</span><span lang="sv">Beställning</span></a>
+      <a href="#register"><span lang="en">Register</span><span lang="sv">Anmäl dig</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Språk">
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-set-lang="sv" aria-pressed="false">SV</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="rhero" id="top">
+    <div class="wrap">
+      <p class="kicker"><span lang="en">For resellers</span><span lang="sv">För återförsäljare</span></p>
+      <h1><span lang="en">Systems Thinking for Leaders<em>for your shelves and your readers</em></span><span lang="sv">Systemtänkande för ledare<em>för era hyllor och era läsare</em></span></h1>
+      <p class="sub"><span lang="en">Volume I, <em>Seeing the Whole</em>, comes out in English on 19 January 2027. Here are the facts you need, and a way to tell me you want to stock it.</span><span lang="sv">Band I, <em>Att se helheten</em>, kommer på engelska den 19 januari 2027. Här finns det ni behöver veta, och ett sätt att tala om att ni vill ha boken.</span></p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#register"><span lang="en">Register as a reseller</span><span lang="sv">Anmäl er som återförsäljare</span></a>
+        <a class="btn btn-ghost" href="#book"><span lang="en">The facts</span><span lang="sv">Fakta om boken</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="book">
+    <div class="wrap">
+      <p class="kicker"><span lang="en">The book</span><span lang="sv">Boken</span></p>
+      <h2 class="sr"><span lang="en">Facts about Volume I</span><span lang="sv">Fakta om Band I</span></h2>
+      <div class="facts">
+        <dl class="spec-list">
+          <div><dt><span lang="en">Title</span><span lang="sv">Titel</span></dt><dd><span lang="en">Systemic Actions – Systems Thinking for Leaders, From Theory to Mastery<small>Volume I: Seeing the Whole</small></span><span lang="sv">Systemic Actions – Systems Thinking for Leaders, From Theory to Mastery<small>Band I: Att se helheten (engelska utgåvan)</small></span></dd></div>
+          <div><dt><span lang="en">Author</span><span lang="sv">Författare</span></dt><dd>Mattias Seger</dd></div>
+          <div><dt><span lang="en">Format</span><span lang="sv">Format</span></dt><dd><span lang="en">Landscape, 11 × 8.5 in, full colour, 480 pages</span><span lang="sv">Liggande, 11 × 8,5 tum, fyrfärg, 480 sidor</span></dd></div>
+          <div><dt><span lang="en">Editions</span><span lang="sv">Utgåvor</span></dt><dd><span lang="en">Paperback $69<small>Hardcover $119</small></span><span lang="sv">Häftad 69 USD<small>Inbunden 119 USD</small></span></dd></div>
+          <div><dt><span lang="en">Dates</span><span lang="sv">Datum</span></dt><dd><span lang="en">Pre-order from 1 December 2026<small>Release 19 January 2027 · Swedish edition spring 2027</small></span><span lang="sv">Förbeställning från 1 december 2026<small>Utgivning 19 januari 2027 · svenska utgåvan våren 2027</small></span></dd></div>
+          <div><dt><span lang="en">Printing</span><span lang="sv">Tryck</span></dt><dd><span lang="en">Print on demand through IngramSpark<small>Distribution to Amazon and other bookshops</small></span><span lang="sv">Print on demand via IngramSpark<small>Distribution till Amazon och andra bokhandlar</small></span></dd></div>
+          <div><dt><span lang="en">Trade discount</span><span lang="sv">Återförsäljarrabatt</span></dt><dd><span lang="en">40 %</span><span lang="sv">40 %</span></dd></div>
+          <div><dt>ISBN</dt><dd><span lang="en">Not assigned yet<small>I send them to registered resellers as soon as they are final.</small></span><span lang="sv">Inte tilldelade än<small>Jag skickar dem till registrerade återförsäljare så fort de är klara.</small></span></dd></div>
+        </dl>
+        <div class="side">
+          <h3><span lang="en">What the book is</span><span lang="sv">Vad boken är</span></h3>
+          <div lang="en">
+            <p>Systems thinking for leaders who have to act on Monday morning: how to tell the complicated from the complex, where the leverage points are, and how what leaders discover can reach the people who can change the conditions.</p>
+            <p>It is the first of five volumes. Read the <a href="/?lang=en#intro">free Introduction</a> before you decide.</p>
+          </div>
+          <div lang="sv">
+            <p>Systemtänkande för ledare som ska agera på måndag morgon: hur man skiljer det komplicerade från det komplexa, var hävstängerna finns och hur det ledare upptäcker kan nå dem som kan ändra förutsättningarna.</p>
+            <p>Det är det första av fem band. Läs den <a href="/?lang=sv#intro">kostnadsfria inledningen</a> innan ni bestämmer er.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band sec" id="order">
+    <div class="wrap">
+      <p class="kicker"><span lang="en">Ordering</span><span lang="sv">Beställning</span></p>
+      <h2><span lang="en">How it reaches your shelf</span><span lang="sv">Så når boken er hylla</span></h2>
+      <p class="lead" style="margin-top:18px"><span lang="en">The books are printed on demand, so there is no stock to carry before you know there are readers.</span><span lang="sv">Böckerna trycks vid beställning, så ni behöver inte lagerhålla innan ni vet att det finns läsare.</span></p>
+      <ol class="steps">
+        <li><h3><span lang="en">Register</span><span lang="sv">Anmäl er</span></h3><p><span lang="en">Tell me who you are and how you sell. It takes a minute.</span><span lang="sv">Berätta vilka ni är och hur ni säljer. Det tar en minut.</span></p></li>
+        <li><h3><span lang="en">Get the details</span><span lang="sv">Få underlaget</span></h3><p><span lang="en">I send the ISBNs, the cover and the product information as soon as they are final, and tell you when ordering opens.</span><span lang="sv">Jag skickar ISBN, omslag och produktinformation så fort de är klara och talar om när beställning öppnar.</span></p></li>
+        <li><h3><span lang="en">Order</span><span lang="sv">Beställ</span></h3><p><span lang="en">Order the way you usually do. The trade discount is 40 %.</span><span lang="sv">Beställ som ni brukar. Återförsäljarrabatten är 40 %.</span></p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="reg sec" id="register">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker"><span lang="en">Register</span><span lang="sv">Anmäl er</span></p>
+        <h2><span lang="en">Tell me you want to stock it</span><span lang="sv">Tala om att ni vill ha boken</span></h2>
+        <p class="lead" style="margin-top:18px"><span lang="en">I answer personally, normally within a few working days.</span><span lang="sv">Jag svarar personligen, normalt inom några arbetsdagar.</span></p>
+      </div>
+      <form class="rform" id="rform" novalidate>
+        <div><label for="f-name"><span lang="en">Your name</span><span lang="sv">Ditt namn</span></label><input type="text" id="f-name" name="name" autocomplete="name" required maxlength="120"></div>
+        <div><label for="f-org"><span lang="en">Shop or organisation</span><span lang="sv">Butik eller organisation</span></label><input type="text" id="f-org" name="org" autocomplete="organization" required maxlength="160"></div>
+        <div><label for="f-type"><span lang="en">Type</span><span lang="sv">Typ</span></label>
+          <select id="f-type" name="type" required>
+            <option value="" disabled selected data-en="Choose…" data-sv="Välj…">Choose…</option>
+            <option value="bookshop" data-en="Bookshop" data-sv="Bokhandel">Bookshop</option>
+            <option value="online" data-en="Online retailer" data-sv="Nätbokhandel">Online retailer</option>
+            <option value="library" data-en="Library" data-sv="Bibliotek">Library</option>
+            <option value="distributor" data-en="Distributor or wholesaler" data-sv="Distributör eller grossist">Distributor or wholesaler</option>
+            <option value="training" data-en="Training or course provider" data-sv="Utbildnings- eller kursanordnare">Training or course provider</option>
+            <option value="other" data-en="Other" data-sv="Annat">Other</option>
+          </select></div>
+        <div><label for="f-country"><span lang="en">Country</span><span lang="sv">Land</span></label><input type="text" id="f-country" name="country" autocomplete="country-name" required maxlength="80"></div>
+        <div><label for="f-email"><span lang="en">Email</span><span lang="sv">E-post</span></label><input type="email" id="f-email" name="email" autocomplete="email" required maxlength="254"></div>
+        <div><label for="f-qty"><span lang="en">Expected quantity (optional)</span><span lang="sv">Förväntad mängd (valfritt)</span></label><input type="text" id="f-qty" name="qty" maxlength="120"></div>
+        <div class="full"><label for="f-msg"><span lang="en">Message (optional)</span><span lang="sv">Meddelande (valfritt)</span></label><textarea id="f-msg" name="message" maxlength="2000"></textarea></div>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <div class="full check"><input type="checkbox" id="f-consent" name="consent" required>
+          <span><label for="f-consent" style="display:inline;font:inherit;letter-spacing:0;text-transform:none;color:inherit;margin:0"><span lang="en">I agree that Mattias Seger may contact me about this enquiry. <a href="#integritet">How my details are handled</a>.</span><span lang="sv">Jag samtycker till att Mattias Seger kontaktar mig om den här förfrågan. <a href="#integritet">Så hanteras mina uppgifter</a>.</span></label></span></div>
+        <div class="full"><button type="submit" class="btn btn-primary" id="f-send"><span lang="en">Send registration</span><span lang="sv">Skicka anmälan</span></button></div>
+        <p class="full msg" id="f-msgbox" role="status" aria-live="polite"></p>
+      </form>
+      <p class="alt"><span lang="en">Prefer email? Write to <a href="mailto:mattias@systemicactions.com">mattias@systemicactions.com</a>.</span><span lang="sv">Föredrar ni mejl? Skriv till <a href="mailto:mattias@systemicactions.com">mattias@systemicactions.com</a>.</span></p>
+    </div>
+  </section>
+
+  <section class="priv" id="integritet">
+    <div class="wrap">
+      <div lang="en">
+        <h2>How your details are handled</h2>
+        <p>Mattias Seger is the data controller. I use what you enter here only to answer your enquiry and to send you the information you ask for about the book, on the basis of your consent, which you can withdraw at any time.</p>
+        <p>The site does not store your enquiry itself. It is sent as one email to me through Resend, the delivery service, using its EU region (Ireland). Resend is a US company, so a transfer outside the EU/EEA can occur. I keep the enquiry for as long as we are in contact about the book and delete it when you ask or when it is no longer needed.</p>
+        <p>You can ask to see, correct or delete what I hold about you by writing to <a href="mailto:mattias@systemicactions.com">mattias@systemicactions.com</a>, and you can complain to the Swedish Authority for Privacy Protection (IMY). The page remembers your language choice in your browser. It sets no cookies and has no analytics.</p>
+      </div>
+      <div lang="sv">
+        <h2>Så hanteras dina uppgifter</h2>
+        <p>Personuppgiftsansvarig är Mattias Seger. Jag använder det du skriver här bara för att svara på din förfrågan och skicka den information om boken som du ber om, med ditt samtycke, som du kan ta tillbaka när du vill.</p>
+        <p>Webbplatsen sparar inte din förfrågan själv. Den skickas som ett mejl till mig via Resend, utskickstjänsten, i dess EU-region (Irland). Resend är ett amerikanskt bolag, så en överföring utanför EU/EES kan förekomma. Jag sparar förfrågan så länge vi har kontakt om boken och raderar den när du ber om det eller när den inte behövs längre.</p>
+        <p>Du kan be att få se, rätta eller radera det jag har om dig genom att skriva till <a href="mailto:mattias@systemicactions.com">mattias@systemicactions.com</a>, och du kan klaga hos Integritetsskyddsmyndigheten (IMY). Sidan minns ditt språkval i din webbläsare. Den sätter inga kakor och har ingen statistik.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <img class="wordmark" src="assets/logos/ledarskap-ordmarke-skog.svg" alt="Mattias Seger · Ledarskapsböcker">
+    <p>© 2026 Mattias Seger · Systemic Actions</p>
+    <p><a class="back" href="/"><span lang="en">Back to systemicactions.com</span><span lang="sv">Tillbaka till systemicactions.com</span></a> · <a href="#integritet"><span lang="en">Privacy</span><span lang="sv">Integritet</span></a></p>
+    <p class="ai"><span lang="en">Generated by AI, Directed by MS. The design, code and texts of this page were produced with AI.</span><span lang="sv">Generated by AI, Directed by MS. Sidans formgivning, kod och texter är framtagna med AI.</span></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  var UI = {
+    en: { sending: 'Sending…', send: 'Send registration',
+          ok: 'Thank you. Your registration is sent, and I will answer personally.',
+          missing: 'Please fill in your name, organisation, type, country and email.',
+          invalid: 'Please enter a valid email address.', consent: 'Please tick the box so I may contact you.',
+          fail: 'It didn’t go through just now. Please write to mattias@systemicactions.com instead.' },
+    sv: { sending: 'Skickar…', send: 'Skicka anmälan',
+          ok: 'Tack. Din anmälan är skickad och jag svarar personligen.',
+          missing: 'Fyll i namn, organisation, typ, land och e-post.',
+          invalid: 'Skriv en giltig e-postadress.', consent: 'Kryssa i rutan så att jag får kontakta dig.',
+          fail: 'Det gick inte igenom just nu. Skriv gärna till mattias@systemicactions.com i stället.' }
+  };
+  var form = document.getElementById('rform'), box = document.getElementById('f-msgbox'), btn = document.getElementById('f-send');
+  function say(text, err) { box.textContent = text; box.className = 'full msg' + (err ? ' err' : ''); }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var lang = root.getAttribute('data-lang') === 'sv' ? 'sv' : 'en', t = UI[lang], f = form.elements;
+    if (f.website.value) return;
+    var d = { name: f.name.value.trim(), org: f.org.value.trim(), type: f.type.value, country: f.country.value.trim(),
+              email: f.email.value.trim(), qty: f.qty.value.trim(), message: f.message.value.trim(), consent: f.consent.checked, lang: lang, website: '' };
+    if (!d.name || !d.org || !d.type || !d.country) { say(t.missing, true); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) { say(t.invalid, true); f.email.focus(); return; }
+    if (!d.consent) { say(t.consent, true); f.consent.focus(); return; }
+    btn.disabled = true; btn.textContent = t.sending; say('');
+    fetch('/api/reseller', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (j) { if (!j || !j.ok) throw new Error('rejected'); form.reset(); btn.hidden = true; say(t.ok, false); })
+      .catch(function () { btn.disabled = false; btn.textContent = t.send; say(t.fail, true); });
+  });
+  function setLang(lang, save) {
+    root.setAttribute('data-lang', lang); root.lang = lang;
+    document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === lang)); });
+    document.querySelectorAll('#f-type option').forEach(function (o) { o.textContent = o.getAttribute('data-' + lang); });
+    if (!btn.disabled && !btn.hidden) btn.textContent = UI[lang].send;
+    if (save) {
+      try { localStorage.setItem('sa-lang', lang); } catch (e) {}
+      try { history.replaceState(null, '', '?lang=' + lang + location.hash); } catch (e) {}
+    }
+  }
+  document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.addEventListener('click', function () { setLang(b.getAttribute('data-set-lang'), true); }); });
+  setLang(root.getAttribute('data-lang') === 'sv' ? 'sv' : 'en', false);
+})();
+</script>
+
+</body>
+</html>
